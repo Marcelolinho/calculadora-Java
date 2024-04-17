@@ -42,7 +42,7 @@ public class Main {
 
     public static void exibirMenu(Scanner opcao, int varOpcao, Loja varLoja, Vendedor varVendedor, Cliente varCliente) {
         do {
-            System.out.println("[1] - Dados empresa \n[2] - Dados Vendedor \n[3] - Dados Cliente \n[4] - Sair");
+            System.out.println("[1] - Dados empresa \n[2] - Dados Vendedor \n[3] - Dados Cliente \n[4] - Criar Pedido \n[5] - Sair");
             varOpcao = opcao.nextInt();
 
             switch (varOpcao) {
@@ -66,6 +66,10 @@ public class Main {
                     break;
 
                 case 4:
+
+                    break;
+
+                case 5:
                     System.out.println("Calculadora encerrada!");
                     break;
 
@@ -73,6 +77,6 @@ public class Main {
                     System.out.println("Erro de digitação, escolha uma das opções novamente.");
                     break;
             }
-        } while (varOpcao != 4);
+        } while (varOpcao != 5);
     }
 }

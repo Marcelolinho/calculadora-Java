@@ -7,6 +7,6 @@ public class Item {
     public double valor;
 
     public void gerarDescricao() {
-        System.out.println("id: " + this.id + "\nnome: " + this.nome + "\ntipo: " + this.tipo + "\nvalor: " + this.valor);
+        System.out.println("Id: " + this.id + "\nNome: " + this.nome + "\nTipo: " + this.tipo + "\nValor: " + this.valor);
     }
 }

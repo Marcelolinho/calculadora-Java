@@ -1,16 +1,14 @@
 package listaSeis.src;
 
-public class Vendedor extends Empregado {
-    public String cidade;
-    public String bairro;
-    public String rua;
-    public Double salarioBase;
-    public Double[] salarioRecebido = new Double[99];
-    public Double[] bonusMensal = new Double[99];
+public class Vendedor extends Pessoa {
+    public static int idVendedor;
+    public static Double salarioBase;
+    public static Double[] salarioRecebido = new Double[99];
+    public static Double[] bonusMensal = new Double[99];
 
     public void apresentarse() {
         System.out.println("Olá, eu sou o vendedor(a) " + nome + ", moro na cidade " + cidade + ", no bairro " + bairro
-                + ", na rua " + rua + "!");
+                + ", na rua " + this.rua + "!");
     }
 
     public void calcularMedia() {

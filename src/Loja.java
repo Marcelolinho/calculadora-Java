@@ -1,15 +1,15 @@
 package listaSeis.src;
 
 public class Loja {
-    public int id;
-    public String nome;
-    public String razaoSocial;
-    public String cnpj;
-    public String cidade;
-    public String bairro;
-    public String rua;
-    public int[] vendedores = new int[99];
-    public int[] clientes = new int[99];
+    public static int id;
+    public static String nome;
+    public static String razaoSocial;
+    public static String cnpj;
+    public static String cidade;
+    public static String bairro;
+    public static String rua;
+    public static int[] vendedores = new int[99];
+    public static int[] clientes = new int[99];
 
     public void apresentarse() {
         System.out.println("Loja: " + nome + "\nCNPJ: " + cnpj + "\nEndereço: " + cidade + ", " + bairro + ", " + rua);

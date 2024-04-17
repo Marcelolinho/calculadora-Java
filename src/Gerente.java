@@ -1,5 +1,5 @@
 package listaSeis.src;
 
-public class Gerente extends Empregado{
+public class Gerente extends Pessoa{
     
 }
