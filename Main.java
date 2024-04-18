@@ -3,6 +3,9 @@ package listaSeis;
 import java.util.Scanner;
 
 import calculadoraV2.src.*;
+import listaSeis.src.Gerente;
+import listaSeis.src.Pedido;
+import listaSeis.src.ProcessaPedido;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,11 +39,30 @@ public class Main {
         kaue.idade = 18;
         kaue.cidade = "Cascavel";
         kaue.bairro = "Maria Luiza";
+        // Cria Gerente
+        Gerente sandro = new Sandro();
+        sandro.id = 1;
+        sandro.nome = "Sandro";
+        sandro.idade = 25;
+        sandro.nomeLoja = "Prisma Softwares LTDA";
+        sandro.endereco.bairro = "Centro";
+        sandro.endereco.cidade = "Cascavel";
+        sandro.endereco.rua = "Av. Brasil";
+        sandro.salarioBase = 17550;
+        sandro.salarioRecebido = new Double[] {17550, 1600.50, 17001.37};
+        // Cria Item
+        Item apostila = new Item();
+        
+        // Cria Pedido
+
+        // Alimenta ProcessaPedido
+
+
 
         exibirMenu(option, optionMenu, prisma, marcelo, kaue);
     }
 
-    public static void exibirMenu(Scanner opcao, int varOpcao, Loja varLoja, Vendedor varVendedor, Cliente varCliente) {
+    public static void exibirMenu(Scanner opcao, int varOpcao, Loja varLoja, Vendedor varVendedor, Cliente varCliente, Pedido varPedido, ProcessaPedido varProcessaPedido) {
         do {
             System.out.println("[1] - Dados empresa \n[2] - Dados Vendedor \n[3] - Dados Cliente \n[4] - Criar Pedido \n[5] - Sair");
             varOpcao = opcao.nextInt();
@@ -66,7 +88,9 @@ public class Main {
                     break;
 
                 case 4:
-
+                    varPedido.calcularValorTotal();
+                    varPedido.gerarDescricaoVenda();
+                    varProcessaPedido.processar();
                     break;
 
                 case 5:
