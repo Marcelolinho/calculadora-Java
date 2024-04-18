@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import calculadoraV2.src.*;
 import listaSeis.src.Gerente;
+import listaSeis.src.Item;
 import listaSeis.src.Pedido;
 import listaSeis.src.ProcessaPedido;
 
@@ -52,9 +53,14 @@ public class Main {
         sandro.salarioRecebido = new Double[] {17550, 1600.50, 17001.37};
         // Cria Item
         Item apostila = new Item();
+        apostila.id = 1;
+        apostila.nome = "Apostila";
+        apostila.tipo = "Estudos";
+        apostila.valor = 10;
         
         // Cria Pedido
-
+        Pedido pedido = new Pedido();
+        pedido.
         // Alimenta ProcessaPedido
 
 
